@@ -1,0 +1,44 @@
+<!-- src/main/resources/templates/fragments/navbar.html -->
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo e Nome da Aplicação -->
+                <a class="navbar-brand" href="/">
+                    <img src="/images/atrah.png" alt="Logo" width="80" height="50" class="d-inline-block align-text-top">
+                </a>
+
+            <!-- Botão de Colapso para Dispositivos Móveis -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pedidos">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/clientes">Clientes</a>
+                    </li>
+
+                    <!-- Menu Suspenso -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Configurações
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/funcionarios">Funcionários</a></li>
+                            <li><a class="dropdown-item" href="/entregadores">Entregadores</a></li>
+                            <li><a class="dropdown-item" href="/horario">Horário de Funcionamento</a></li>
+                            <li><a class="dropdown-item" href="/produtos/config">Configurar Produtos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
